@@ -5,13 +5,13 @@ public class RotatedBinarySearch {
 
     public static void main(String[] args) {
 
-       int[] nums = {3,5,1};
-       int target = 3;
+       int[] nums = {1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1};
+       int target = 2;
         System.out.println(search(nums, target));
     }
 
     static int search(int[] arr , int target){
-        int pivot = findPivot(arr);
+        int pivot = findPivotWithDuplicates(arr);
 
         if(pivot == -1){
             // pivot is not find means arr is sorted and do normal binary search
